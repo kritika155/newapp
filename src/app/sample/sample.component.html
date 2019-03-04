@@ -1,0 +1,6 @@
+<input type="button" name="add" value="add button" id="add" (click)="addbutton()">
+<ul class="heroes">
+  <button *ngFor="let button of buttons">{{button.name}}</button>
+</ul>
+<input type="text" placeholder="" [(ngModel)]="num">
+<input type="button" name="remove" value="remove" id="remove" (click)="remove(num)">

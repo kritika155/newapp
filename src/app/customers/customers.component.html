@@ -1,0 +1,41 @@
+<menu></menu>
+<hr>
+<h2>My Customers</h2>
+<div class="customers">
+<input type="text" placeholder="name" [(ngModel)]="customer.name">
+<input type="text" placeholder="email" [(ngModel)]="customer.email">
+<input type="button" (click)="addCustomer()" name="AddCustomers" value="Add Customer">
+<div class="log">
+<input type="text" placeholder="id" [(ngModel)]="num">
+<input type="button" class="dell" (click)="deleteCustomer(num)" name="DeleteCustomers" value="DeleteCustomers">
+<input type="button" (click)="edit()" value="edit" name="edit">
+</div>
+<hr>
+
+<ul class="customers">
+<li *ngFor="let customer of customers"
+    [class.selected]="customer === selectedCustomer"
+    (click)="onSelect(customer)">
+<span>{{customer.id}}</span>
+|
+<span>{{customer.name}}</span>
+|
+<span>{{customer.email}}</span>
+</li>
+</ul>
+
+</div>
+<div *ngIf="selectedCustomer">
+
+    <h2>{{selectedCustomer.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{selectedCustomer.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="selectedCustomer.name" placeholder="name">
+      </label>
+      <label>Email:
+          <input [(ngModel)]="selectedCustomer.email" placeholder="email">
+        </label>
+    </div>
+  
+  </div>

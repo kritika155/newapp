@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+body
+{
+    background-color:greenyellow;
+    animation:mm 2s infinite;
+}
+    /* @keyframes mm{
+     from{background-color:greenyellow} 
+     to{background-color:red;}
+    } */
