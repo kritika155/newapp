@@ -1,6 +1,7 @@
 <menu></menu>
 <hr>
 <h2>My Customers</h2>
+
 <div class="customers">
 <input type="text" placeholder="name" [(ngModel)]="customer.name">
 <input type="text" placeholder="email" [(ngModel)]="customer.email">
@@ -24,7 +25,7 @@
 </li>
 </ul>
 
-</div>
+
 <div *ngIf="selectedCustomer">
 
     <h2>{{selectedCustomer.name | uppercase}} Details</h2>

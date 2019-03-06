@@ -18,7 +18,7 @@ export class CustomersComponent implements OnInit {
   {
     if((this.customer.name.length==0)&&(this.customer.email.length==0))
     {
-      alert("Please the form");
+      alert("Please fill the form");
     }
     else
          if((this.customer.name.length>0)&&(this.customer.email.length>0))
